@@ -1,15 +1,15 @@
 ﻿  Source1.cpp
-C:\Users\betom\OneDrive\Documentos\3er Semestre\Lab. de Progra Avanzada\Pia de Matematicas 2\Pia de Matematicas 2\Source1.cpp(361,23): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\betom\OneDrive\Documentos\3er Semestre\Lab. de Progra Avanzada\Pia de Matematicas 2\Pia de Matematicas 2\Source1.cpp(362,25): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\betom\OneDrive\Documentos\3er Semestre\Lab. de Progra Avanzada\Pia de Matematicas 2\Pia de Matematicas 2\Source1.cpp(363,23): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\betom\OneDrive\Documentos\3er Semestre\Lab. de Progra Avanzada\Pia de Matematicas 2\Pia de Matematicas 2\Source1.cpp(364,23): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\betom\OneDrive\Documentos\3er Semestre\Lab. de Progra Avanzada\Pia de Matematicas 2\Pia de Matematicas 2\Source1.cpp(368,23): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\betom\OneDrive\Documentos\3er Semestre\Lab. de Progra Avanzada\Pia de Matematicas 2\Pia de Matematicas 2\Source1.cpp(369,23): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\betom\OneDrive\Documentos\3er Semestre\Lab. de Progra Avanzada\Pia de Matematicas 2\Pia de Matematicas 2\Source1.cpp(371,25): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\betom\OneDrive\Documentos\3er Semestre\Lab. de Progra Avanzada\Pia de Matematicas 2\Pia de Matematicas 2\Source1.cpp(372,23): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\betom\OneDrive\Documentos\3er Semestre\Lab. de Progra Avanzada\Pia de Matematicas 2\Pia de Matematicas 2\Source1.cpp(376,23): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\betom\OneDrive\Documentos\3er Semestre\Lab. de Progra Avanzada\Pia de Matematicas 2\Pia de Matematicas 2\Source1.cpp(377,25): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\betom\OneDrive\Documentos\3er Semestre\Lab. de Progra Avanzada\Pia de Matematicas 2\Pia de Matematicas 2\Source1.cpp(378,23): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\betom\OneDrive\Documentos\3er Semestre\Lab. de Progra Avanzada\Pia de Matematicas 2\Pia de Matematicas 2\Source1.cpp(379,23): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\betom\OneDrive\Documentos\3er Semestre\Lab. de Progra Avanzada\Pia de Matematicas 2\Pia de Matematicas 2\Source1.cpp(532,13): warning C4326: el tipo de valor devuelto de 'main' debe ser 'int' en lugar de 'void'
+C:\Users\betom\OneDrive\Documentos\3er Semestre\Lab. de Progra Avanzada\Pia de Matematicas 2\Pia de Matematicas 2\Source1.cpp(385,23): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\betom\OneDrive\Documentos\3er Semestre\Lab. de Progra Avanzada\Pia de Matematicas 2\Pia de Matematicas 2\Source1.cpp(386,25): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\betom\OneDrive\Documentos\3er Semestre\Lab. de Progra Avanzada\Pia de Matematicas 2\Pia de Matematicas 2\Source1.cpp(387,23): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\betom\OneDrive\Documentos\3er Semestre\Lab. de Progra Avanzada\Pia de Matematicas 2\Pia de Matematicas 2\Source1.cpp(388,23): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\betom\OneDrive\Documentos\3er Semestre\Lab. de Progra Avanzada\Pia de Matematicas 2\Pia de Matematicas 2\Source1.cpp(392,23): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\betom\OneDrive\Documentos\3er Semestre\Lab. de Progra Avanzada\Pia de Matematicas 2\Pia de Matematicas 2\Source1.cpp(393,23): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\betom\OneDrive\Documentos\3er Semestre\Lab. de Progra Avanzada\Pia de Matematicas 2\Pia de Matematicas 2\Source1.cpp(395,25): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\betom\OneDrive\Documentos\3er Semestre\Lab. de Progra Avanzada\Pia de Matematicas 2\Pia de Matematicas 2\Source1.cpp(396,23): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\betom\OneDrive\Documentos\3er Semestre\Lab. de Progra Avanzada\Pia de Matematicas 2\Pia de Matematicas 2\Source1.cpp(400,23): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\betom\OneDrive\Documentos\3er Semestre\Lab. de Progra Avanzada\Pia de Matematicas 2\Pia de Matematicas 2\Source1.cpp(401,25): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\betom\OneDrive\Documentos\3er Semestre\Lab. de Progra Avanzada\Pia de Matematicas 2\Pia de Matematicas 2\Source1.cpp(402,23): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\betom\OneDrive\Documentos\3er Semestre\Lab. de Progra Avanzada\Pia de Matematicas 2\Pia de Matematicas 2\Source1.cpp(403,23): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\betom\OneDrive\Documentos\3er Semestre\Lab. de Progra Avanzada\Pia de Matematicas 2\Pia de Matematicas 2\Source1.cpp(574,13): warning C4326: el tipo de valor devuelto de 'main' debe ser 'int' en lugar de 'void'
   Pia de Matematicas 2.vcxproj -> C:\Users\betom\OneDrive\Documentos\3er Semestre\Lab. de Progra Avanzada\Pia de Matematicas 2\x64\Debug\Pia de Matematicas 2.exe

@@ -59,7 +59,9 @@ int tx = 0, ty = 0, tz = 0;
 int sx = 0, sy = 0, sz = 0;
 double angulo = 0, seno = 0, coseno = 0, rad = 0;
 double  mc1[4][4] = { 0 }, mc2[4][4] = { 0 }, mcr[4][4] = { 0 };
-//matrizcomp[4][4] = { 0 }
+
+double point1[3] = { 0 }, point2[3] = { 0 }, grado = 0, p1p2[3] = { 0 }, abc[3] = { 0 }, d = 0;
+double alpha = 0, beta = 0;
 void load() {
 	ifstream leer;
 	leer.open("matrices.txt");
@@ -250,10 +252,32 @@ void resta() {
 	}
 }
 
-
-
-
-
+void mult() {
+	mostrar();
+	if (op1->col != op2->fila) {
+		cout << "\n\t\t No se pueden multiplicar \n\t\t La columna de la matriz 1 es diferente a la fila de la matriz 2" << endl;
+	}
+	else {
+		aux = inicio;
+		while (aux->sig != NULL) {
+			aux = aux->sig;
+		}
+		aux->sig = new matriz;
+		aux = aux->sig;
+		aux->sig = NULL;
+		aux->fila = op1->fila;
+		aux->col = op2->col;
+		x++;
+		aux->n = x;
+		for (int i = 0; i < op1->fila; i++) {
+			for (int k = 0; k < op2->col; k++) {
+				for (int j = 0; j < op2->fila; j++) {
+					aux->mat[i][k] = aux->mat[i][k] + (op1->mat[i][j] * op2->mat[j][k]);
+				}
+			}
+		}
+	}
+}
 
 void comp() {
 	while (val2) {
@@ -291,7 +315,7 @@ void comp() {
 			taux->num = o;
 
 			for (int i = 0; i < 4; i++) {
-				for (int j = 0; j <4; j++) {
+				for (int j = 0; j < 4; j++) {
 					cout << "\t" << taux->matt[i][j];
 				}
 				cout << "\n";
@@ -395,7 +419,7 @@ void comp() {
 			break;
 		case 5:
 			int k = o;	//guarda cuantas indicaciones guardamos
-			while (o!=0) {
+			while (o != 0) {
 				if (cinicio == NULL) {
 					cinicio = new compuesta;
 					caux = cinicio;
@@ -415,7 +439,7 @@ void comp() {
 				while (taux != NULL && taux->num != o) {
 					taux = taux->tig;
 				}
-				if(taux != NULL && taux->num == o) { //si lo encuentra, lo guarda en una nueva matriz
+				if (taux != NULL && taux->num == o) { //si lo encuentra, lo guarda en una nueva matriz
 					for (int i = 0; i < 4; i++) {
 						for (int j = 0; j < 4; j++) {
 							caux->compu[i][j] = taux->matt[i][j];
@@ -428,7 +452,7 @@ void comp() {
 				while (saux != NULL && saux->num != o) {
 					saux = saux->ssig;
 				}
-				if (saux!=NULL && saux->num == o) { //si lo encuentra, lo guarda en una nueva matriz
+				if (saux != NULL && saux->num == o) { //si lo encuentra, lo guarda en una nueva matriz
 					for (int i = 0; i < 4; i++) {
 						for (int j = 0; j < 4; j++) {
 							caux->compu[i][j] = saux->mas[i][j];
@@ -503,37 +527,55 @@ void comp() {
 		}
 	}
 }
-void mult() {
-	mostrar();
-	if (op1->col != op2->fila) {
-		cout << "\n\t\t No se pueden multiplicar \n\t\t La columna de la matriz 1 es diferente a la fila de la matriz 2" << endl;
+
+void puntos() {
+	cout << "Ingrese el punto 1, valor de x: ";
+	cin >> point1[0];
+	cout << "Ingrese el punto 1, valor de y: ";
+	cin >> point1[1];
+	cout << "Ingrese el punto 1, valor de z: ";
+	cin >> point1[2];
+	
+	cout << "Ingrese el punto 2, valor de x: ";
+	cin >> point2[0];
+	cout << "Ingrese el punto 2, valor de y: ";
+	cin >> point2[1];
+	cout << "Ingrese el punto 2, valor de z: ";
+	cin >> point2[2];
+
+	cout << "Ingrese el angulo de rotación: ";
+	cin >> grado;
+	for (int i = 0; i < 3; i++) {
+		p1p2[i] = point2[i] - point1[i];
+	}
+	if (p1p2[0] != 0 && p1p2[1] == 0 && p1p2[2] == 0) {
+
+		cout << "Mc=T^-1(" << point1[0] << "," << point1[1] << "," << point1[2] << ") Rx(" << grado << ")T(" << 0-point1[0] << "," << 0-point1[1] << "," << 0-point1[2] << ")";
+	}
+	else if (p1p2[0] == 0 && p1p2[1] != 0 && p1p2[2] == 0) {
+		cout << "Mc=T^-1(" << point1[0] << "," << point1[1] << "," << point1[2] << ") Ry(" << grado << ")T(" << 0-point1[0] << "," << 0-point1[1] << "," << 0-point1[2] << ")";
+	}
+	else if (p1p2[0] == 0 && p1p2[1] == 0 && p1p2[2] != 0) {
+		cout << "Mc=T^-1(" << point1[0] << "," << point1[1] << "," << point1[2] << ") Rz(" << grado << ")T(" << 0-point1[0] << "," << 0-point1[1] << "," << 0-point1[2] << ")";
 	}
 	else {
-		aux = inicio;
-		while (aux->sig != NULL) {
-			aux = aux->sig;
+		for (int i = 0; i < 3; i++) {
+			abc[i] = p1p2[i] / (sqrt(pow(p1p2[0],2) + pow(p1p2[1], 2) + pow(p1p2[2], 2)));
 		}
-		aux->sig = new matriz;
-		aux = aux->sig;
-		aux->sig = NULL;
-		aux->fila = op1->fila;
-		aux->col = op2->col;
-		x++;
-		aux->n = x;
-		for (int i = 0; i < op1->fila; i++) {
-			for (int k = 0; k < op2->col; k++) {
-				for (int j = 0; j < op2->fila; j++) {
-					aux->mat[i][k] = aux->mat[i][k] + (op1->mat[i][j] * op2->mat[j][k]);
-				}
-			}
-		}
+		d = sqrt(pow(abc[1], 2) + pow(abc[2], 2));
+		alpha = acos((abc[2] / d));
+		beta = 0 - (asin(abc[0] / sqrt(pow(abc[0], 2) + pow(d, 2))));
+		alpha = alpha * 180 / PI;
+		beta = beta * 180 / PI;
+		cout << "Mc=T^-1(" << point1[0] << "," << point1[1] << "," << point1[2] << ") Rx^-1(" << 0-alpha << ") Ry^-1("<<0-beta<<") Rz("<<grado<<") Ry(" << beta << ") Rx ("<<alpha<<") T(" << 0-point1[0] << ", " << 0-point1[1] << ", " << 0-point1[2] << ")";
 	}
+	v = false;
 }
 void main() {
 	setlocale(LC_ALL, "");
 	load();
 	while (val) {
-		cout << "\n\t\t Que desea hacer? \n\t 1.Agregar matriz \n\t 2.Sumar \n\t 3.Restar \n\t 4.Multiplicar \n\t 5.Ingresar matriz compuesta \n\t 6.Salir.\n\t\t|||";
+		cout << "\n\t\t Que desea hacer? \n\t 1.Agregar matriz \n\t 2.Sumar \n\t 3.Restar \n\t 4.Multiplicar \n\t 5.Ingresar matriz compuesta \n\t 6. Matriz a travez de dos puntos \n\t 7.Salir \n\t\t|||";
 		cin >> op;
 		switch (op) {
 		case 1:
@@ -552,6 +594,9 @@ void main() {
 			comp();
 			break;
 		case 6:
+			puntos();
+			break;
+		case 7:
 			val = false;
 			v = false;
 			break;
